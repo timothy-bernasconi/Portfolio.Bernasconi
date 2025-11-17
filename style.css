@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    
+}
+
+header{
+    height: 70px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: 0.5 ease;
+    padding: 0 6rem;
+}
+
+nav ul {
+    display: flex;
+    padding: 0 2rem;
+    gap: 20px;
+}
+
+header, li {
+    list-style: none;
+}
+
+header, nav a{
+        color:white;
+        font-size:1em ;
+        font-weight: 500;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    
+}
+
+
+header.sticky{
+    background-color: #2a2a2a3b;
+    backdrop-filter: blur(15px);
+
+}
+
+header .title{
+    color:rgb(255, 255, 255);
+    font-size: 1.8em;
+    font-weight: 700;
+    text-transform: 700;
+    text-decoration: none;
+}
+
+header nav a:hover{
+    color: #3a6cf4;
+ }
+
+
+header.sticky nav a:hover{
+    color: black;
+}
+
+button {
+    color: white;
+    background: #3a6cf4;
+    font-size: 1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    transition: 0.5s ease;
+    
+}
+
+button:hover {
+       background: #235bf6;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+.main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(./assets/bg.png)no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 0 6rem;
+}
+
+.main .content {
+    max-width: 800px;
+}
+
+.main .content h1 {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.main .content h1 span{
+    font-size: 2.8em;
+    font-weight: 600;
+}
+
+.animated-text{
+    position: relative;
+    height: 70px;
+    overflow: hidden;
+}
+
+.animated-text{
+    color: #4e9eff;
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 1px;
+}
+
+.animated-text p:nth-child(1){
+    animation: text-move 10s infinite;
+
+}
+
+
+@keyframes text-move{
+    0%{
+        margin-top: 0;
+    }
+    25%{
+        margin-top: -70px;
+    }
+    50%{
+        margin-top: -140px;
+    }
+
+    75%{
+        margin-top: -70px;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+
+.media-icons{
+    margin-top: 1rem;
+}
+
+.media-icons a{
+    color: white;
+    font-size: 2rem;
+    margin-right: 30px;
+}
+
+ .about{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding: 0 6rem;
+ }
+
+ .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+ }
+
+  .about .col-left{
+    position: relative;
+    width: 50%;
+ }
+
+  
+ .about .col-right{
+    position: relative;
+    width: 50%;
+ }
+
+ .about .col-left .img-card{
+    position: relative;
+    width: 100%;
+    min-height: 450px;
+ }
+
+  .about .col-left .img-card img{
+    position: absolute;
+    top: 0;
+    nav-left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+ }
+
+ .about .col-right .content-title{
+    font-size: 2em;
+    font-weight: 800 ;
+    margin-bottom: 20px;
+ }
+
+ .about .col-right paragraph-text{
+    font-size: 1em;
+
+ }
+
+ .section-title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: #3a6cf4;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom:60px ;
+ }
+
+ .section-title::before{
+    content:  '';
+    position: absolute;
+    top: 56px;
+    left: 50%;
+    width: 140px;
+    height: 4px;
+    background: #3a6cf4;
+    transform: translateX(-50%);
+ }
+
+ .section-title::after{
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50% ;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #3a6cf4;
+    transform: translateX(-50%);
+ }
+
+ .skills{
+    background: black;
+    padding: 0 6rem;
+    margin-top: 2rem;
+ }
+
+ .skills .content{
+    position:relative ;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+
+ }
+
+ .skills h2 {
+    margin-top: 2rem;
+ }
+
+ .skills .content .col-left{
+    position: relative;
+    width: 46%;
+ }
+ 
+ .skills .content .col-right{
+    position: relative;
+    width: 46%;
+ }
+
+ .skills .content .col-right .bar{
+    margin-bottom: 15px;
+    padding: 10px;
+ }
+
+  .skills .content .col-right .bar .info{
+    display: flex;
+    align-items: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
+.skills .content .col-right .bar .info .span{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.skills .content .col-right .bar .line{
+    position: relative;
+    width: 100%;
+    height: 15px;
+    background: #ccc;
+    border-radius: 2px;
+}
+
+.skills .content .col-right .bar .line:before{
+    content:'';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 2px;
+}
+
+.skills .content .col-right .bar .languages:before{
+    width: 95%;
+    background: #e45126;
+}
+
+.skills .content .col-right .bar .javascript:before{
+    width: 90%;
+    background: #0c73b8;
+}
+
+.skills .content .col-right .bar .host:before{
+    width: 90%;
+    background: #e3a324;
+}
+
+.skills .content .col-right .bar .seo:before{
+    width: 87%;
+    background: #30dd6d;
+}
+
+.skills .content .col-right .bar .ia:before{
+    width: 87%;
+    background: #6d7eb8;
+}
