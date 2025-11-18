@@ -13,6 +13,7 @@ body {
     
 }
 
+
 header{
     height: 70px;
     width: 100%;
@@ -50,7 +51,7 @@ header, nav a{
 
 header.sticky{
     background-color: #2a2a2a3b;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(10px);
 
 }
 
@@ -83,6 +84,7 @@ button {
     letter-spacing: 1px;
     border-radius: 2px;
     transition: 0.5s ease;
+    border: none;
     
 }
 
@@ -234,7 +236,9 @@ button a {
     color: #3a6cf4;
     font-size: 2.2em;
     font-weight: 800;
-    margin-bottom:60px ;
+    margin-bottom: 3rem;
+   
+   
  }
 
  .section-title::before{
@@ -275,9 +279,7 @@ button a {
 
  }
 
- .skills h2 {
-    margin-top: 2rem;
- }
+
 
  .skills .content .col-left{
     position: relative;
@@ -346,4 +348,223 @@ button a {
 .skills .content .col-right .bar .ia:before{
     width: 87%;
     background: #6d7eb8;
+}
+
+.work{
+    background: #000016 ;
+    padding: 0 6rem;
+}
+
+.work p{
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    
+}
+
+.project{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.work img {
+
+  width: 100%;
+  height: auto;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+
+
+.work .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.contact .content{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.contact .content .row{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.contact .content .row .card{
+  background: #fff;
+  width: 240px;
+  margin: 20px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+  border-radius: 10px;
+}
+
+.contact .content .row .card .contact-icon{
+  color: #3a6cf4;
+  font-size: 4em;
+  text-align: center;
+  transition: transform 0.5s ease;
+}
+
+.contact .content .row .card:hover .contact-icon{
+  transform: translateY(-10px);
+}
+
+.contact .content .row .card .info{
+  text-align: center;
+}
+
+.contact .content .row .card .info h3{
+  color: #111;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 10px;
+}
+
+.contact .content .row .card .info span{
+  color: #666;
+  font-weight: 500;
+}
+
+.footer{
+    background: #000016;
+    color: white;
+    text-align: center;
+    padding: 2em;
+}
+
+.footer .footer-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer p{
+    font-size: 16px;
+    margin-top: 600;
+    text-decoration: none;
+}
+
+@media (max-width: 1040px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    header.sticky {
+        padding: 10px 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav.active {
+        z-index: 888;
+        position: fixed;
+        background: #fff;
+        top: 0;
+        right: 0;
+        width: 380px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+        transition: 0.3s ease;
+    }
+
+    nav a {
+        color: #000;
+        font-size: 1.2em;
+        margin: 10px;
+        padding: 0 20px;
+        border-radius: 20px;
+    }
+
+    nav a:hover {
+        background: #3a6cf4;
+        color: #fff;
+        transition: 0.3s ease;
+    }
+
+    .menu-btn {
+        position: absolute;
+        background: url(images/menu.png) no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        right: 0;
+        margin: 0 20px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .menu-btn.active {
+        z-index: 999;
+        background: url(images/close.png) no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0.3s ease;
+        filter: invert(1);
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+    .main .content h1 {
+        font-size: 1.5em;
+    }
+
+    .animated-text {
+        font-size: 2.2em;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+    }
+
+    .about .container {
+        flex-direction: column;
+    }
+
+    .about .col-left,
+    .about .col-right {
+        width: 100%;
+    }
+
+    .about .col-right {
+        margin-top: 40px;
+    }
+
+    .skills .content {
+        flex-direction: column;
+    }
+
+    .skills .content .col-left,
+    .skills .content .col-right {
+        width: 100%;
+    }
+
+    .skills .content .col-right {
+        margin-top: 40px;
+    }
 }
