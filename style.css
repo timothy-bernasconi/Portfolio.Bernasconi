@@ -180,7 +180,7 @@ button a {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    margin-top: 2rem;
+    margin-top: 2rem; 
     padding: 0 6rem;
  }
 
@@ -204,8 +204,9 @@ button a {
 
  .about .col-left .img-card{
     position: relative;
-    width: 100%;
-    min-height: 450px;
+    height: 400px;
+    width: auto;
+   
  }
 
   .about .col-left .img-card img{
@@ -237,38 +238,25 @@ button a {
     font-size: 2.2em;
     font-weight: 800;
     margin-bottom: 3rem;
+    
    
    
  }
 
- .section-title::before{
-    content:  '';
-    position: absolute;
-    top: 56px;
-    left: 50%;
-    width: 140px;
-    height: 4px;
-    background: #3a6cf4;
-    transform: translateX(-50%);
- }
+ .test {
 
- .section-title::after{
-    content: '';
-    position: absolute;
-    top: 50px;
-    left: 50% ;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #3a6cf4;
-    transform: translateX(-50%);
- }
+  border: 5px solid red !important;
+}
+
+ 
 
  .skills{
     background: black;
     padding: 0 6rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
+
  }
+
 
  .skills .content{
     position:relative ;
@@ -278,7 +266,6 @@ button a {
     color: white;
 
  }
-
 
 
  .skills .content .col-left{
@@ -350,43 +337,75 @@ button a {
     background: #6d7eb8;
 }
 
-.work{
-    background: #000016 ;
+.work {
+    background: #000016;
     padding: 0 6rem;
-}
-
-.work p{
     color: white;
-    font-size: 1em;
-    text-align: center;
-    
 }
 
-.project{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 2rem;
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .work img {
-
-  width: 100%;
-  height: auto;
-  border: 1px solid white;
-  cursor: pointer;
+    width: 100%;
+    height: auto;
+    border: 1px solid white;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    border-radius: inherit;
 }
 
-
-
-.work .content{
+.work .project .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); 
+    color: white;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    text-align: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    z-index: 2;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: inherit;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3); 
 }
+
+.work .project:hover .overlay {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.02); 
+    background: rgba(255, 255, 255, 0.08); 
+    box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+    
+}
+
+.work .project:hover img {
+    transform: scale(1.03); 
+    z-index: 1;
+}
+
+.work p {
+    text-align: center;
+}
+
 
 .contact .content{
   display: flex;
