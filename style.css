@@ -10,6 +10,7 @@
 
 body {
   height: 100vh;
+  background-color: black;
 
 }
 
@@ -31,7 +32,7 @@ h2 {
 header {
   height: 70px;
   width: 100%;
-  background: rgba(0, 103, 221, 0.685);
+  background: rgb(1, 189, 189);
   position: fixed;
   top: 0;
   left: 0;
@@ -86,7 +87,7 @@ header.sticky nav a:hover {
 
 button {
   color: white;
-  background: #09f;
+  background: rgb(1, 117, 117);
   font-size: 1em;
   font-weight: 600;
   display: inline-block;
@@ -97,10 +98,6 @@ button {
   border-radius: 2px;
   transition: 0.5s ease;
   border: none;
-}
-
-button:hover {
-  background: #06d;
 }
 
 button a {
@@ -145,7 +142,7 @@ button a {
 }
 
 .animated-text {
-  color: #09f;
+  color: #0ff;
   font-size: 3em;
   font-weight: 700;
   line-height: 70px;
@@ -186,7 +183,7 @@ button a {
 }
 
 .about {
-  background-color: white;  
+  background-color: rgba(252, 248, 248, 0.671);  
   position: relative;
   width: 100%;
   display: flex;
@@ -202,6 +199,37 @@ button a {
   justify-content: center;
   align-items: center;
   gap: 35px;
+}
+
+.container2 > div{
+ height: 80px;
+ width: 80px;
+  background: rgba(245, 245, 245, 0.097);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(77, 75, 75, 0.2),
+  inset 0 1px 3px rgba(255, 255, 255, 0.1);
+ border-radius: 5px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 2.5rem;
+ border: 1px solid rgba(255, 255, 255, 0.25);  
+ cursor: pointer;
+ margin-top: 15px;
+ margin-bottom: 15px;
+
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 15px;
+}
+
+.container2 > div:hover {
+  color: black;
+  background-color: rgba(0, 255, 255, 0.501);
+  transition: 0.3s ease;
 }
 
 .about .col-left {
@@ -241,7 +269,7 @@ button a {
 }
 
 .skills {
-  background: black;
+  background-image: url(./assets/bg-2.png);
   padding: 2rem 6rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
@@ -253,6 +281,7 @@ button a {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-direction: row-reverse;
   color: white;
 }
 
@@ -267,7 +296,7 @@ button a {
 }
 
 .skills .content .col-right .bar {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   padding: 10px;
 }
 
@@ -318,7 +347,7 @@ button a {
 
 .skills .content .col-right .bar .javascript:before {
   width: 90%;
-  background-color: #0aa;
+  background-color: rgb(10, 189, 189);
 }
 
 .skills .content .col-right .bar .host:before {
@@ -404,7 +433,7 @@ button a {
   text-align: center;
 }
 
-.work .project .overlay .glass-btn {
+.glass-btn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -421,7 +450,7 @@ button a {
   transition: all 0.3s ease;
 }
 
-.work .project .overlay .glass-btn:hover {
+ .glass-btn:hover {
   background: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25),
@@ -492,7 +521,7 @@ button a {
 }
 
 .footer {
-  background: #06d;
+  background: rgb(1, 117, 117);
   color: white;
   text-align: center;
   padding: 2em;
