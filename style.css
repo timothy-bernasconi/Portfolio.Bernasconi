@@ -10,7 +10,7 @@
 
 body {
   height: 100vh;
-  background-color: black;
+  background-color:#FDFDFD;
 
 }
 
@@ -22,7 +22,7 @@ h2 {
   position: relative;
   display: flex;
   justify-content: center;
-  color: #09f;
+  color: rgb(1, 117, 117);
   font-size: 2.2em;
   font-weight: 800;
   margin-top: 2rem;
@@ -32,7 +32,7 @@ h2 {
 header {
   height: 70px;
   width: 100%;
-  background: rgb(1, 189, 189);
+  background: rgb(1, 117, 117);
   position: fixed;
   top: 0;
   left: 0;
@@ -115,7 +115,7 @@ button a {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding: 0 6rem;
+  padding: 0 6rem 2rem;
 }
 
 .main .content {
@@ -183,14 +183,13 @@ button a {
 }
 
 .about {
-  background-color: rgba(252, 248, 248, 0.671);  
+  background-color: #FDFDFD;
   position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin-top: 2rem;
-  padding: 0 6rem;
+  padding: 0 6rem 2rem;
   color: rgb(0, 0, 0);
 }
 
@@ -366,38 +365,51 @@ button a {
 }
 
 .work {
-  background: #000016;
+  background-color: #FDFDFD;
   padding: 2rem 6rem;
-  color: white;
+  
 }
 
-.project {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 2rem;
-  position: relative;
-  overflow: hidden;
+.work p {
+  text-align: center;
 }
 
-.work img {
-  width: 100%;
-  height: auto;
-  border: 1px solid white;
-  cursor: pointer;
-  display: block;
-  z-index: 1;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  border-radius: inherit;
+.projects {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    
+    
 }
 
-.work .project .overlay {
+.glass-container {
+    margin-top: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 400px;
+    width: 350px;
+    padding: 40px;
+    border-radius: 20px; 
+    border: 1px solid rgba(255,255,255, 0.4);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.4);
+    z-index: 10;
+    overflow: hidden;
+}
+
+
+
+
+ /* .work .projects .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 300px;
+  height: 350px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
@@ -427,11 +439,9 @@ button a {
 .work .project:hover img {
   transform: scale(1.03);
   z-index: 1;
-}
+}  */
 
-.work p {
-  text-align: center;
-}
+
 
 .glass-btn {
   display: inline-flex;
@@ -458,7 +468,7 @@ button a {
 }
 
 .contact {
-    background-color: #000;
+    background-image: url(./assets/bg-4.png);
     padding: 2rem 6rem;
 }
 .contact .content {
@@ -494,7 +504,7 @@ button a {
 }
 
 .contact .content .row .card .contact-icon {
-  color: #09f;;
+  color: #0ff;
   font-size: 4em;
   text-align: center;
   transition: transform 0.5s ease;
