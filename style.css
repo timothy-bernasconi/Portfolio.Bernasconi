@@ -178,13 +178,17 @@ button a {
   margin-right: 30px;
 }
 
+.media-icons a:hover {
+  color: rgb(1, 117, 117); ;
+}
+
 
 .about {
   background-color: #FDFDFD;
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
   padding: 0 6rem 2rem;
   color: rgb(0, 0, 0);
@@ -200,12 +204,12 @@ button a {
 
 .about .col-left {
   position: relative;
-  width: 45%;
+  width: 50%;
 }
 
 .about .col-right {
   position: relative;
-  width: 55%;
+  width: 50%;
 }
 
 .about .col-left .img-card {
@@ -243,7 +247,8 @@ button a {
 
 .container2 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
   grid-row-gap: 15px;
 }
 
@@ -282,15 +287,16 @@ button a {
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: row-reverse;
+  gap: 2rem;
   color: white;
 }
 
 .skills .content .col-left,
 .skills .content .col-right {
   position: relative;
-  width: 46%;
+  width: 43%;
 }
 
 .skills .content .col-right .bar {
@@ -344,12 +350,18 @@ button a {
 
 
 .work {
-  padding: 0rem 6rem 2rem;
-  background-color: #FDFDFD;
+  padding: 0rem 6rem 4rem;
+  background-color: #fdfdfd;
+
 }
 
 .work .portfolio {
   text-align: center;
+}
+
+.work h3 {
+  color: rgb(1, 117, 117);
+  
 }
 
 .projects {
@@ -360,119 +372,120 @@ button a {
   gap: 150px;
 }
 
-.projects .container {
-  height: 150px;
-  width: 800px;
-  display: flex;
-  align-items: center;
+
+.card-container {
+
+  height: 300px;
+  width: 450px;
+  
+
 }
 
-.projects img {
-  height: 350px;
-  width: auto;
-  border-radius: 15px;
-}
+.card-container1 {
 
-.projects i {
-  font-size: 3rem;
-}
-
-.work .projects:nth-of-type(even) {
-  flex-direction: row-reverse;
-}
-
-.wp {
-
-  font-size: 1.8rem;
-  font-weight: 600;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 50px;
   text-align: center;
-  margin-top: 4rem;
 }
 
 
-.project-wp {
-  position: relative;
-  width: 100%;    
-  height: 450px;   
-  margin: 2rem auto;
-  border-radius: 20px;
+.card {
+  position: relative; 
   overflow: hidden;
-  cursor: pointer;
-  border: 1px solid rgb(34, 14, 14);
 }
 
-.project-wp img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  display: block;
-  border-radius: 20px;
-}
-
-.project-wp .overlay {
-  position: absolute;
+.overlay {
+  position: absolute;   
   top: 0;
   left: 0;
+  width: 100%;          
+  height: 100%;
+  background-color: rgba(0, 255, 255, 0.595);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;           
+  transition: opacity 0.3s ease;
+  border-radius: 15px;  
+}
+
+.card:hover .overlay {
+  opacity: 1;          
+}
+
+.overlay1 {
+  position: absolute;   
+  top: 0;
+  left: 0;
+  width: 100%;          
+  height: 100%;
+  background-color: rgba(255, 170, 60, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;           
+  transition: opacity 0.3s ease;
+  border-radius: 15px;  
+}
+
+.overlay1 p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.card:hover .overlay1 {
+  opacity: 1;          
+}
+
+.card {
   width: 100%;
   height: 100%;
-  background: rgba(1, 117, 117, 0.855);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.project-wp:hover .overlay {
-  opacity: 1;
-}
-
-.project-wp .overlay h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.project-wp .overlay p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-}
-
-.project-wp .overlay .glass-btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 30px;
-  font-size: 1rem;
-  color: white;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2),
-              inset 0 1px 3px rgba(255,255,255,0.1);
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out;
   cursor: pointer;
-  transition: all 0.3s ease;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2),
+              -5px -5px 10px rgba(0,0,0,0.05);
+
 }
 
-.project-wp .overlay .glass-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25),
-              inset 0 1px 4px rgba(255,255,255,0.15);
-}
 
 
-
-.project-wp img {
-  height: 450px;
+.front {
+  position: absolute;
+  display: flex;
+  justify-content: center;
   width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
   border-radius: 15px;
 }
 
+
+
+.card i {
+  font-size: 3rem;
+  
+}
+
+.card p {
+  margin-bottom: 1rem;
+  color: rgb(97, 97, 97);
+}
+
+
+
+.card img {
+  border-radius: 15px;
+}
 
 .work .languages {
   display: flex;
@@ -482,30 +495,6 @@ button a {
   color: rgb(1, 117, 117);
 }
 
-
-.glass-container {
-  margin-top: 2rem;
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  text-align: center;
-  gap: 15px;
-  height: 420px;
-  width: 300px;
-  padding: 40px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 25px 45px rgba(0,0,0,0.4);
-  z-index: 10;
-  overflow: hidden;
-  background-color: white;
-  transition: 1s ease;
-}
-
-.glass-container:hover {
-  transform: scale(1.1);
-}
 
 .glass-btn {
   display: inline-flex;
@@ -525,14 +514,15 @@ button a {
 
 .glass-btn:hover {
   background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px) scale(1.05);
   box-shadow: 0 6px 15px rgba(0,0,0,0.25), inset 0 1px 4px rgba(255,255,255,0.15);
 }
 
 
+
+
 .contact {
   background-image: url(./assets/bg-4.png);
-  padding: 2rem 6rem 3rem;
+  padding: 2rem 6rem;
 }
 
 .contact .content {
@@ -615,6 +605,8 @@ button a {
 }
 
 
+
+
 @media (max-width: 1040px) {
   header { padding: 12px 20px; }
   header.sticky { padding: 10px 20px; }
@@ -675,6 +667,15 @@ button a {
 
   section { padding: 80px 20px; }
 
+  h2 {
+    text-align: center;
+  }
+
+  .card-container1 {
+    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .main .content h1 { font-size: 1.5em; }
 
   .animated-text { font-size: 2.2em; }
@@ -700,4 +701,23 @@ button a {
   .skills .content .col-right { margin-top: 40px; }
 
   .projects { flex-direction: column; }
+
+  .container2 {
+    padding: 0 5rem;
+   
+   
+  }
+
+  .content {
+    align-items: center;
+    
+  }
+}
+
+@media (min-width : 1041px) and (max-width : 1300px) {
+  .card-container1 {
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
