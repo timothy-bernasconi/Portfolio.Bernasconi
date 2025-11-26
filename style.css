@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"rel="stylesheet">);
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" >);
 
 * {
   margin: 0;
@@ -26,12 +26,15 @@ h2 {
   display: flex;
   justify-content: center;
   color: rgb(1, 117, 117);
-  font-size: 2.5em;
+  font-size: 2.8rem;
   font-weight: 800;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
+.toggle {
+  display: none;
+}
 
 header {
   height: 70px;
@@ -51,11 +54,11 @@ header.sticky {
 }
 
 header.sticky a {
-  color : rgb(1, 117, 117);
+  color: rgb(1, 117, 117);
 }
 
 header .title {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   font-size: 1.8em;
   font-weight: 700;
   text-transform: 700;
@@ -68,12 +71,13 @@ nav ul {
   gap: 20px;
 }
 
-header, li {
+header,
+li {
   list-style: none;
 }
 
 header, nav a {
-  color: white;
+  color: #ffffff;
   font-size: 1em;
   font-weight: 500;
   text-decoration: none;
@@ -92,7 +96,7 @@ header.sticky nav a:hover {
 
 
 button {
-  color: white;
+  color: #ffffff;
   background: rgb(1, 117, 117);
   font-size: 1em;
   font-weight: 600;
@@ -108,7 +112,7 @@ button {
 }
 
 button a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -131,7 +135,7 @@ button a {
 }
 
 .main .content h1 {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   font-size: 2rem;
   font-weight: 500;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.53);
@@ -142,7 +146,6 @@ button a {
   font-weight: 600;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.53);
 }
-
 
 .animated-text {
   position: relative;
@@ -160,31 +163,43 @@ button a {
 }
 
 @keyframes text-move {
-  0% { margin-top: 0; }
-  25% { margin-top: -70px; }
-  50% { margin-top: -140px; }
-  75% { margin-top: -70px; }
-  100% { margin-top: 0; }
-}
+  0% {
+    margin-top: 0;
+  }
 
+  25% {
+    margin-top: -70px;
+  }
+
+  50% {
+    margin-top: -140px;
+  }
+
+  75% {
+    margin-top: -70px;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
 
 .media-icons {
   margin-top: 1rem;
 }
 
 .media-icons a {
-  color: white;
+  color: #ffffff;
   font-size: 2rem;
   margin-right: 30px;
 }
 
 .media-icons a:hover {
-  color: rgb(1, 117, 117); ;
+  color: rgb(1, 117, 117);
+  ;
 }
 
-
 .about {
-  background-color: #FDFDFD;
   position: relative;
   width: 100%;
   display: flex;
@@ -195,7 +210,8 @@ button a {
 }
 
 .about h3 {
-  font-size: 1.6rem;
+  font-size: 2rem;
+  margin-top: -1rem;
 }
 
 .about button {
@@ -221,11 +237,11 @@ button a {
 .about .col-left .img-card img {
   position: absolute;
   top: 0;
-  nav-left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+
 }
 
 .about .col-right .content-title {
@@ -252,7 +268,7 @@ button a {
   grid-row-gap: 15px;
 }
 
-.container2 > div {
+.container2>div {
   height: 80px;
   width: 80px;
   background: rgba(245, 245, 245, 0.097);
@@ -269,7 +285,7 @@ button a {
   margin-bottom: 15px;
 }
 
-.container2 > div:hover {
+.container2>div:hover {
   color: black;
   background-color: rgba(0, 255, 255, 0.501);
   transition: 0.3s ease;
@@ -290,31 +306,20 @@ button a {
   justify-content: space-evenly;
   flex-direction: row-reverse;
   gap: 2rem;
-  color: white;
+  color: #ffffff;
 }
 
-.skills .content .col-left,
-.skills .content .col-right {
+.skills .content .col-left, .skills .content .col-right {
   position: relative;
-  width: 43%;
+  width: 50%;
 }
 
 .skills .content .col-right .bar {
   margin-bottom: 10px;
   padding: 10px;
+  
 }
 
-.skills .content .col-right .bar .info {
-  display: flex;
-  align-items: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
-}
-
-.skills .content .col-right .bar .info .span {
-  font-size: 18px;
-  font-weight: 500;
-}
 
 .skills .content .col-right .bar .line {
   position: relative;
@@ -325,6 +330,7 @@ button a {
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
+  margin-top: 5px;
 }
 
 .skills .content .col-right .bar .line:before {
@@ -342,26 +348,43 @@ button a {
   transition: all 0.3s ease;
 }
 
-.skills .content .col-right .bar .languages:before { width: 95%; background-color: #0ff; }
-.skills .content .col-right .bar .javascript:before { width: 90%; background-color: rgb(10, 189, 189); }
-.skills .content .col-right .bar .host:before { width: 85%; background-color: #0cf; }
-.skills .content .col-right .bar .seo:before { width: 84%; background-color: #09f; }
-.skills .content .col-right .bar .ia:before { width: 80%; background-color: #06d; }
-
-
-.work {
-  padding: 0rem 6rem 4rem;
-  background-color: #fdfdfd;
-
+.skills .content .col-right .bar .languages:before {
+  width: 95%;
+  background-color: #0ff;
 }
 
-.work .portfolio {
+.skills .content .col-right .bar .javascript:before {
+  width: 90%;
+  background-color: rgb(10, 189, 189);
+}
+
+.skills .content .col-right .bar .host:before {
+  width: 85%;
+  background-color: #0cf;
+}
+
+.skills .content .col-right .bar .seo:before {
+  width: 84%;
+  background-color: #09f;
+}
+
+.skills .content .col-right .bar .ia:before {
+  width: 80%;
+  background-color: #06d;
+}
+
+.work {
+  padding: 0 6rem 4rem;
+}
+
+.portfolio {
   text-align: center;
+  padding: 0 2rem;
+  margin-bottom: 4rem;
 }
 
 .work h3 {
   color: rgb(1, 117, 117);
-  
 }
 
 .projects {
@@ -369,15 +392,13 @@ button a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 150px;
+  gap: 170px;
 }
-
 
 .card-container {
 
-  height: 300px;
-  width: 450px;
-  
+  height: 260px;
+  width: 410px;
 
 }
 
@@ -387,50 +408,51 @@ button a {
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   margin-top: 2rem;
-  gap: 50px;
+  margin-bottom: 2rem;
+  gap: 75px;
   text-align: center;
 }
 
 
 .card {
-  position: relative; 
+  position: relative;
   overflow: hidden;
 }
 
 .overlay {
-  position: absolute;   
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;          
+  width: 100%;
   height: 100%;
   background-color: rgba(0, 255, 255, 0.595);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  opacity: 0;           
+  opacity: 0;
   transition: opacity 0.3s ease;
-  border-radius: 15px;  
+  border-radius: 15px;
 }
 
 .card:hover .overlay {
-  opacity: 1;          
+  opacity: 1;
 }
 
 .overlay1 {
-  position: absolute;   
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;          
+  width: 100%;
   height: 100%;
-  background-color: rgba(255, 170, 60, 0.55);
+  background-color: rgba(255, 60, 73, 0.859);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  opacity: 0;           
+  opacity: 0;
   transition: opacity 0.3s ease;
-  border-radius: 15px;  
+  border-radius: 15px;
 }
 
 .overlay1 p {
@@ -439,12 +461,12 @@ button a {
 }
 
 .card:hover .overlay1 {
-  opacity: 1;          
+  opacity: 1;
 }
 
 .card {
-  width: 100%;
-  height: 100%;
+  width: 410px;
+  height: 280px;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 1s ease-in-out;
@@ -452,12 +474,10 @@ button a {
   border: 1px solid #ccc;
   margin-top: 1rem;
   border-radius: 15px;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.2),
-              -5px -5px 10px rgba(0,0,0,0.05);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+    -5px -5px 10px rgba(0, 0, 0, 0.05);
 
 }
-
-
 
 .front {
   position: absolute;
@@ -469,11 +489,9 @@ button a {
   border-radius: 15px;
 }
 
-
-
 .card i {
   font-size: 3rem;
-  
+
 }
 
 .card p {
@@ -481,18 +499,8 @@ button a {
   color: rgb(97, 97, 97);
 }
 
-
-
 .card img {
   border-radius: 15px;
-}
-
-.work .languages {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  font-size: 3rem;
-  color: rgb(1, 117, 117);
 }
 
 
@@ -502,27 +510,28 @@ button a {
   align-items: center;
   padding: 12px 30px;
   font-size: 1rem;
-  color: white;
+  color: #ffffff;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 15px;
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2), inset 0 1px 3px rgba(255,255,255,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), inset 0 1px 3px rgba(255, 255, 255, 0.1);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .glass-btn:hover {
   background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25), inset 0 1px 4px rgba(255,255,255,0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25), inset 0 1px 4px rgba(255, 255, 255, 0.15);
 }
-
-
-
 
 .contact {
   background-image: url(./assets/bg-4.png);
   padding: 2rem 6rem;
+}
+
+.contact a {
+color: #0ff;
 }
 
 .contact .content {
@@ -530,7 +539,6 @@ button a {
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
- 
 }
 
 .contact .content .row {
@@ -541,9 +549,9 @@ button a {
 }
 
 .contact .content .row .card {
-  width: 240px;
-  margin: 20px;
-  padding: 25px;
+  height: 200px;
+  width: 200px;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -552,9 +560,7 @@ button a {
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  z-index: 10;
-  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .contact .content .row .card .contact-icon {
@@ -584,7 +590,6 @@ button a {
   font-weight: 500;
 }
 
-
 .footer {
   background: rgb(1, 117, 117);
   color: white;
@@ -604,14 +609,18 @@ button a {
   text-decoration: none;
 }
 
-
-
-
 @media (max-width: 1040px) {
-  header { padding: 12px 20px; }
-  header.sticky { padding: 10px 20px; }
+  header {
+    padding: 12px 20px;
+  }
 
-  nav { display: none; }
+  header.sticky {
+    padding: 10px 20px;
+  }
+
+  nav {
+    display: none;
+  }
 
   nav.active {
     z-index: 888;
@@ -643,6 +652,11 @@ button a {
     transition: 0.3s ease;
   }
 
+ .toggle {
+  display: flex;
+  font-size: 2rem;
+ }
+
   .menu-btn {
     position: absolute;
     background: url(images/menu.png) no-repeat;
@@ -665,7 +679,9 @@ button a {
     filter: invert(1);
   }
 
-  section { padding: 80px 20px; }
+  section {
+    padding: 80px 20px;
+  }
 
   h2 {
     text-align: center;
@@ -676,41 +692,86 @@ button a {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .main .content h1 { font-size: 1.5em; }
-
-  .animated-text { font-size: 2.2em; }
-
-  .section-title { font-size: 1.8em; }
-
-  .about .container { flex-direction: column; }
-
-  .about .col-left,
-  .about .col-right { width: 100%; }
-
-  .about .col-right { margin-top: 40px; }
-
-  .about h3 { text-align: center; }
-
-  .paragraph-text { text-align: center; }
-
-  .skills .content { flex-direction: column; }
-
-  .skills .content .col-left,
-  .skills .content .col-right { width: 100%; }
-
-  .skills .content .col-right { margin-top: 40px; }
-
-  .projects { flex-direction: column; }
-
-  .container2 {
-    padding: 0 5rem;
-   
-   
+  .main .content h1 {
+    font-size: 1.5em;
+    text-align: center;
   }
 
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .animated-text {
+    font-size: 2.2em;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 1.8em;
+  }
+
+  .about .container {
+    flex-direction: column;
+  }
+
+  .about .col-left,
+  .about .col-right {
+    width: 100%;
+  }
+
+  .about .col-right {
+    margin-top: 40px;
+
+  }
+
+  .about h3 {
+    text-align: center;
+  }
+
+  .paragraph-text {
+    text-align: center;
+  }
+
+  .skills .content {
+    flex-direction: column;
+
+  }
+
+  .skills .content .col-left,
+  .skills .content .col-right {
+    width: 100%;
+  }
+
+  .skills .content .col-right {
+    margin-top: 40px;
+  }
+
+  .projects {
+    flex-direction: column;
+  }
+
+  .container2 {
+    padding: 0 4rem;
+    gap: 10px;
+
+  }
+
+  .work {
+    justify-content: center;
+    align-items: center;
+  }
   .content {
     align-items: center;
-    
+
   }
 }
 
