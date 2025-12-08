@@ -2,7 +2,7 @@
 
 * {
   margin: 0;
-  padding: 0;
+
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
@@ -12,6 +12,7 @@ body {
   height: 100vh;
   background-color: #FDFDFD;
 }
+
 
 section {
   margin-bottom: 2rem;
@@ -586,6 +587,133 @@ button a {
   text-decoration: none;
 }
 
+@media (max-width: 575px) {
+ @media (max-width: 575px) {
+
+  header {
+    padding: 0 1rem;
+  }
+
+  nav ul {
+    gap: 10px;
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .main {
+    padding: 0 1rem;
+    background-attachment: scroll;
+  }
+
+  .main .content h1 {
+    font-size: 1.4rem;
+  }
+
+  .main .content h1 span {
+    font-size: 2rem;
+  }
+
+  .animated-text {
+    font-size: 1.4rem;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .about {
+    padding: 0 1rem;
+  }
+
+  .about .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about .col-left,
+  .about .col-right {
+    width: 100%;
+  }
+
+  .about .col-left .img-card {
+    height: 250px;
+  }
+
+  .skills {
+    padding: 2rem 1rem;
+  }
+
+  .skills .content {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  .skills .content .col-left,
+  .skills .content .col-right {
+    width: 100%;
+  }
+
+  .work {
+    padding: 0 1rem 2rem;
+  }
+
+  .projects {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .card-container,
+  .card {
+    width: 100%;
+    max-width: 330px;
+    height: 240px;
+  }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-container1 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .container2 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .container2 > div {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .contact {
+    padding: 2rem 1rem;
+  }
+
+  .contact .content .row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact .content .row .card {
+    width: 100%;
+    max-width: 260px;
+    height: 180px;
+  }
+
+  .footer {
+    padding: 2rem 1rem;
+  }
+}
+}
 
 @media (max-width: 1040px) {
   header {
@@ -689,13 +817,13 @@ button a {
     flex-direction: column;
   }
 
-  .skills .content .col-left,
-  .skills .content .col-right {
+  .skills .content .col-left {
     width: 100%;
   }
 
   .skills .content .col-right {
     margin-top: 40px;
+    width: 100%;
   }
 
   .projects {
